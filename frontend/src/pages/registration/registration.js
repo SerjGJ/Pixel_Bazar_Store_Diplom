@@ -9,7 +9,7 @@ import { useResetForm } from '../../hooks';
 import { setUser } from '../../actions';
 import { selectUserRole } from '../../selectors';
 import { ROLE } from '../../constants';
-import styled from 'styled-components';
+import styles from './registration.module.css';
 import { request } from '../../utils/request';
 
 const regFormSchema = yup.object().shape({
@@ -34,7 +34,7 @@ const regFormSchema = yup.object().shape({
 		.oneOf([yup.ref('password'), null], 'Повтор пароля не совпадает'),
 });
 
-const RegistrationContainer = ({ className }) => {
+export const Registration = ({ className }) => {
 	const {
 		register,
 		reset,
@@ -60,7 +60,11 @@ const RegistrationContainer = ({ className }) => {
 	const onSubmit = ({ login, password }) => {
 		request('/register', 'POST', { login, password }).then(({ error, user }) => {
 			if (error) {
-				setServerError(`Ошибка запроса: ${error}`);
+				if (error.includes('E11000 duplicate key error collection')) {
+					setServerError('Пользователь с таким именем уже существует');
+				} else {
+					setServerError(`Ошибка запроса: ${error}`);
+				}
 				return;
 			}
 
@@ -78,7 +82,7 @@ const RegistrationContainer = ({ className }) => {
 	}
 
 	return (
-		<div className={className}>
+		<div className={`${className} ${styles.registrationContainer}`}>
 			<H2>Регистрация</H2>
 			<form onSubmit={handleSubmit(onSubmit)}>
 				<Input
@@ -110,15 +114,3 @@ const RegistrationContainer = ({ className }) => {
 		</div>
 	);
 };
-
-export const Registration = styled(RegistrationContainer)`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-	& > form {
-		display: flex;
-		flex-direction: column;
-		width: 260px;
-	}
-`;

@@ -1,23 +1,30 @@
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styles from './icon.module.css';
 
-const IconContainer = ({ className, id, inactive, ...props }) => (
-	<div className={className} {...props}>
+export const Icon = ({
+	className,
+	id,
+	inactive,
+	disabled,
+	size = '24px',
+	margin = '0',
+	...props
+}) => (
+	<div
+		className={`${styles.iconContainer} ${
+			disabled ? styles.disabled : ''
+		} ${className}`}
+		style={{ fontSize: size, margin }}
+		{...props}
+	>
 		<i className={`fa ${id}`} aria-hidden="true"></i>
 	</div>
 );
 
-export const Icon = styled(IconContainer)`
-	font-size: ${({ size = '24px' }) => size};
-	margin: ${({ margin = '0' }) => margin};
-	color: ${({ disabled }) => (disabled ? '#ccc' : '#000')};
-
-	&:hover {
-		cursor: ${({ inactive }) => (inactive ? 'default' : 'pointer')};
-	}
-`;
-
 Icon.propTypes = {
 	id: PropTypes.string.isRequired,
 	inactive: PropTypes.bool,
+	disabled: PropTypes.bool,
+	size: PropTypes.string,
+	margin: PropTypes.string,
 };

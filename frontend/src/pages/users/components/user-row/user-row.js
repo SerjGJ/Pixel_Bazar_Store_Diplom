@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { Icon } from '../../../../components';
 import { TableRow } from '../table-row/table-row';
 import { PROP_TYPE } from '../../../../constants';
-import styled from 'styled-components';
+import styles from '../../users.module.css';
 import { request } from '../../../../utils/request';
 
-const UserRowContainer = ({
+export const UserRow = ({
 	className,
 	id,
 	login,
@@ -31,11 +31,11 @@ const UserRowContainer = ({
 	const isSaveButtonDisabled = selectedRoleId === initialRoleId;
 
 	return (
-		<div className={className}>
-			<TableRow border={true}>
-				<div className="login-column">{login}</div>
-				<div className="registered-at-column">{registeredAt}</div>
-				<div className="role-column">
+		<div className={`${styles.userRowContainer} ${className}`}>
+			<TableRow className={styles.tableRowContainer} border={true}>
+				<div className={styles.loginColumn}>{login}</div>
+				<div className={styles.registeredAddColumn}>{registeredAt}</div>
+				<div className={styles.roleColumn}>
 					<select value={selectedRoleId} onChange={onRoleChange}>
 						{roles.map(({ id: roleId, name: roleName }) => (
 							<option key={roleId} value={roleId}>
@@ -50,21 +50,11 @@ const UserRowContainer = ({
 						onClick={() => onRoleSave(id, selectedRoleId)}
 					/>
 				</div>
+				<Icon id="fa-trash-o" margin="0 0 0 10px" onClick={onUserRemove} />
 			</TableRow>
-			<Icon id="fa-trash-o" margin="0 0 0 10px" onClick={onUserRemove} />
 		</div>
 	);
 };
-
-export const UserRow = styled(UserRowContainer)`
-	display: flex;
-	margin-top: 10px;
-
-	& select {
-		padding: 0 5px;
-		font-size: 16px;
-	}
-`;
 
 UserRow.propTypes = {
 	id: PropTypes.string.isRequired,

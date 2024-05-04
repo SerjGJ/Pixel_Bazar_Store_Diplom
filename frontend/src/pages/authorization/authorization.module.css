@@ -1,0 +1,18 @@
+.authorizationContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.authorizationContainer > form {
+	display: flex;
+	flex-direction: column;
+	width: 260px;
+}
+
+.styledLink {
+	text-align: center;
+	text-decoration: underline;
+	margin: 20px 0;
+	font-size: 18px;
+}

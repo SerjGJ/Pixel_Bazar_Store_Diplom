@@ -1,0 +1,72 @@
+.container {
+	padding: 20px;
+}
+
+.order {
+	border: 1px solid #000000;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	padding: 20px;
+	background-color: rgb(51, 85, 119); /* Цвет фона блока заказа */
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Тень блока заказа */
+}
+
+.infoBlock {
+	margin-bottom: 15px;
+	color: #e0e0e0;
+}
+
+.label {
+	font-weight: bold;
+	margin-right: 5px;
+}
+
+.productList {
+	list-style: none;
+	padding-left: 0;
+}
+
+.product {
+	margin-bottom: 5px;
+}
+
+/* Стили для кнопки "Ваши заказы" */
+.ordersButton {
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	font-size: 16px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.ordersButton:hover {
+	background-color: #0056b3;
+}
+
+/* Стили для заголовка "Ваши заказы" */
+.title {
+	font-size: 24px;
+	color: #333;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+/* Стили для текста "Нет заказов" */
+.noOrdersText {
+	font-size: 18px;
+	color: #666;
+	text-align: center;
+}
+
+/* Стили для ссылки в заказе */
+.link {
+	color: #007bff;
+	text-decoration: none;
+}
+
+.link:hover {
+	text-decoration: underline;
+}

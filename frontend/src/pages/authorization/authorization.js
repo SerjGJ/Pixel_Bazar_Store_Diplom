@@ -8,7 +8,7 @@ import { AuthFormError, Button, H2, Input } from '../../components';
 import { useResetForm } from '../../hooks';
 import { setUser } from '../../actions';
 import { selectUserRole } from '../../selectors';
-import styled from 'styled-components';
+import styles from './authorization.module.css';
 import { ROLE } from '../../constants';
 import { request } from '../../utils/request';
 
@@ -30,14 +30,7 @@ const authFormSchema = yup.object().shape({
 		.max(30, 'Неверно заполнен пароль. Максимум 30 символов'),
 });
 
-const StyledLink = styled(Link)`
-	text-align: center;
-	text-decoration: underline;
-	margin: 20px 0;
-	font-size: 18px;
-`;
-
-const AuthorizationContainer = ({ className }) => {
+export const Authorization = ({ className }) => {
 	const {
 		register,
 		reset,
@@ -79,7 +72,7 @@ const AuthorizationContainer = ({ className }) => {
 	}
 
 	return (
-		<div className={className}>
+		<div className={`${styles.authorizationContainer} ${className}`}>
 			<H2>Авторизация</H2>
 			<form onSubmit={handleSubmit(onSubmit)}>
 				<Input
@@ -100,20 +93,10 @@ const AuthorizationContainer = ({ className }) => {
 					Авторизоваться
 				</Button>
 				{errorMessage && <AuthFormError>{errorMessage}</AuthFormError>}
-				<StyledLink to="/register">Регистрация</StyledLink>
+				<Link className={styles.styledLink} to="/register">
+					Регистрация
+				</Link>
 			</form>
 		</div>
 	);
 };
-
-export const Authorization = styled(AuthorizationContainer)`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-	& > form {
-		display: flex;
-		flex-direction: column;
-		width: 260px;
-	}
-`;

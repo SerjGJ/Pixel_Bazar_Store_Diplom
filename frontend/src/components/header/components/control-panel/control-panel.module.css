@@ -1,0 +1,21 @@
+.rightAligned {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.user {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.cartItemCount {
+	position: absolute;
+	top: 55px;
+	right: 18px;
+	background-color: #568898; /* Измените цвет фона по вашему усмотрению */
+	color: rgb(0, 0, 0); /* Измените цвет текста по вашему усмотрению */
+	padding: 3px 6px; /* Измените отступы по вашему усмотрению */
+	border-radius: 50%; /* Чтобы сделать круглый фон */
+	font-size: 12px; /* Измените размер шрифта по вашему усмотрению */
+}

@@ -1,0 +1,40 @@
+.productCard {
+	display: flex;
+	flex-direction: column;
+	width: 270px;
+	margin: 20px;
+	border: 2px solid #555;
+	background-color: #357;
+}
+
+.productCard > a > img {
+	display: block;
+	width: 100%;
+}
+
+.productCardLink {
+	text-decoration: none;
+	color: inherit;
+}
+
+.productCardFooter {
+	padding: 5px;
+	border-top: 1px solid #000;
+}
+
+.productCardFooter h4 {
+	margin: 0;
+	color: #fff;
+}
+
+.productCardInfo {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 5px;
+}
+
+.productPrice {
+	display: flex;
+	font-weight: bold;
+	color: #fff;
+}

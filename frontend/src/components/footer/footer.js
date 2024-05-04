@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import styles from './footer.module.css';
 
-const FooterContainer = ({ className }) => {
+export const Footer = ({ className }) => {
 	const [city, setCity] = useState('');
 	const [temperature, setTemperature] = useState('');
 	const [weather, setWeather] = useState('');
 
 	useEffect(() => {
 		fetch(
-			'https://api.openweathermap.org/data/2.5/weather?q=Magnitogorsk&units=metric&lang=ru&appid=acd4f346c669d7400f4dbbeb7f1350e0',
+			'https://api.openweathermap.org/data/2.5/weather?q=Magnitogorsk&units=metric&lang=ru&appid=00d3aecbe75c3f7476d1cd11a1105398',
 		)
 			.then((res) => res.json())
 			.then(({ name, main, weather }) => {
@@ -19,10 +19,10 @@ const FooterContainer = ({ className }) => {
 	}, []);
 
 	return (
-		<div className={className}>
+		<div className={`${className} ${styles.Footer}`}>
 			<div>
-				<div>Блог веб-разработчика</div>
-				<div>web@developer.ru</div>
+				<div>PixelBazaar</div>
+				<div>PixelBazaar@mail.ru</div>
 			</div>
 			<div>
 				<div>
@@ -36,15 +36,3 @@ const FooterContainer = ({ className }) => {
 		</div>
 	);
 };
-
-export const Footer = styled(FooterContainer)`
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 1000px;
-	height: 120px;
-	padding: 20px 40px;
-	font-weight: bold;
-	background-color: rgb(255, 255, 255);
-	box-shadow: rgb(0, 0, 0) 0px 2px 17px;
-`;

@@ -1,8 +1,10 @@
-import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import styles from './auth-form-error.module.css';
 
-export const AuthFormError = styled.div`
-	margin: 10px 0 0;
-	padding: 10px;
-	font-size: 18px;
-	background-color: #fcadad;
-`;
+export const AuthFormError = ({ children }) => (
+	<div className={styles.authFormError}>{children}</div>
+);
+
+AuthFormError.propTypes = {
+	children: PropTypes.node.isRequired,
+};

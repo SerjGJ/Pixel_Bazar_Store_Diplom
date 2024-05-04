@@ -1,0 +1,18 @@
+.searchContainer {
+	display: flex;
+	position: relative;
+	width: 340px;
+	height: 40px;
+	color: white;
+}
+
+.searchContainer > input {
+	padding: 10px 32px 10px 10px;
+	color: rgb(0, 0, 0);
+}
+
+.searchContainer > div {
+	position: absolute;
+	top: 3px;
+	right: 9px;
+}

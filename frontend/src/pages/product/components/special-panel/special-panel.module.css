@@ -1,0 +1,18 @@
+.specialPanelContainer {
+	display: flex;
+	justify-content: space-between;
+}
+
+.buttons {
+	display: flex;
+}
+
+i {
+	top: -1px;
+	position: relative;
+}
+
+.publishedAt {
+	display: flex;
+	font-size: 18px;
+}

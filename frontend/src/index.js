@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './store';
-import { Blog } from './blog';
+import { GameStore } from './game-store';
 import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<BrowserRouter>
 		<Provider store={store}>
-			<Blog />
+			<GameStore />
 		</Provider>
 	</BrowserRouter>,
 );

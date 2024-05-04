@@ -1,0 +1,24 @@
+.productImage {
+	float: left;
+	margin: 0 20px 10px 0;
+}
+
+.productText {
+	font-size: 18px;
+	white-space: pre-line;
+}
+
+.buttonPay {
+	background-color: rgb(51, 85, 119);
+	color: white;
+	border: solid 1px transparent; /* убрать черную границу */
+	width: 100px;
+	padding: 10px 20px; /* добавить отступы */
+	border-radius: 5px; /* добавить закругленные углы */
+	transition: background-color 0.3s ease; /* добавить плавное изменение цвета при наведении */
+}
+
+.buttonPay:hover {
+	background-color: rgb(41, 75, 109); /* изменить цвет при наведении */
+	cursor: pointer;
+}

@@ -1,0 +1,67 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	/* height: 100vh; */
+}
+
+.title {
+	text-align: center;
+	margin-bottom: 20px;
+	color: rgb(0, 0, 0); /* Белый цвет текста */
+}
+
+.form {
+	width: 300px;
+	background-color: rgb(51, 85, 119); /* Черный цвет фона */
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.inputBlock {
+	margin-bottom: 10px;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+	color: rgb(0, 0, 0);
+	font-weight: bold;
+}
+
+input,
+textarea {
+	width: 100%;
+	padding: 5px;
+	box-sizing: border-box;
+	color: rgb(0, 0, 0);
+	font-family: inherit;
+}
+
+textarea {
+	resize: none;
+	font-size: inherit;
+}
+
+.buttonOrder {
+	width: 100%;
+	padding: 10px;
+	background-color: #568898;
+	color: rgb(0, 0, 0);
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.error {
+	color: darkred;
+}
+
+.commentInput {
+	background-color: #ffffff; /* Цвет фона комментария */
+	border: 1px solid #555; /* Цвет границы комментария */
+	border-radius: 5px;
+	padding: 5px;
+}

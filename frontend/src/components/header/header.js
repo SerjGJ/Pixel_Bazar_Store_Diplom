@@ -1,33 +1,10 @@
 import { ControlPanel, Logo } from './components';
-import styled from 'styled-components';
+import styles from './header.module.css';
 
-const Discription = styled.div`
-	font-style: italic;
-`;
-
-const HeaderContainer = ({ className }) => (
-	<header className={className}>
+export const Header = ({ className, userId }) => (
+	<header className={`${className} ${styles.container}`}>
 		<Logo />
-		<Discription>
-			Веб-технологии
-			<br />
-			Написание кода
-			<br />
-			Разбор ошибок
-		</Discription>
-		<ControlPanel />
+		г. Луноград, ул. Кометная, д. 42/1
+		<ControlPanel userId={userId} />
 	</header>
 );
-
-export const Header = styled(HeaderContainer)`
-	display: flex;
-	justify-content: space-between;
-	position: fixed;
-	top: 0;
-	width: 1000px;
-	height: 120px;
-	padding: 20px 40px;
-	background-color: #fff;
-	box-shadow: 0px -2px 17px #000;
-	z-index: 10;
-`;

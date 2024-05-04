@@ -1,0 +1,46 @@
+.basket-page {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.basket-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.basket-table th,
+.basket-table td {
+	border: 1px solid rgb(0, 0, 0);
+	padding: 8px;
+	text-align: left;
+}
+
+.basket-table th {
+	background-color: rgb(51, 85, 119);
+}
+
+.basket-table td span {
+	display: block;
+}
+
+.basket-table .product-name {
+	font-weight: bold;
+}
+
+.basket-table .product-actions {
+	display: flex;
+	align-items: center;
+}
+
+.basket-table .product-actions button {
+	margin-right: 5px;
+}
+
+.basket-table .product-actions input {
+	width: 40px;
+	padding: 4px;
+}
+
+.clear-button {
+	margin-right: 58%; /* Добавьте отступ справа для кнопки очистки */
+}

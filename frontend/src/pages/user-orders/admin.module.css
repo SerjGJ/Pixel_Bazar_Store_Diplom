@@ -1,0 +1,51 @@
+.container {
+	/* padding: 20px; */
+	display: grid;
+	grid-template-columns: 1fr auto; /* Разделение на две колонки: одна занимает доступное пространство, а другая содержит кнопки */
+	gap: 20px; /* Пространство между колонками */
+	justify-content: center; /* Выравнивание по центру */
+	align-items: center; /* Выравнивание по центру */
+}
+
+.h2 {
+	margin: 0;
+}
+
+.search {
+	grid-column: 1 / span 2; /* Растянуть по двум колонкам */
+	margin: auto;
+}
+
+.tableContainer {
+	grid-column: 1 / span 2; /* Растянуть по двум колонкам */
+}
+
+.table {
+	width: 100%; /* Ширина таблицы на всю доступную ширину */
+	border-collapse: collapse; /* Объединение границ ячеек */
+}
+
+.table th,
+.table td {
+	padding: 8px;
+	border: 1px solid #000000;
+}
+
+.table th {
+	background-color: rgb(51, 85, 119); /* Цвет фона для заголовков */
+	font-weight: bold;
+	text-align: left;
+}
+
+.table td {
+	text-align: left;
+}
+
+.buttonContainer {
+	display: flex;
+	justify-content: flex-end; /* Выравнивание кнопок вправо */
+}
+
+.buttonContainer button {
+	margin-left: 10px; /* Промежуток между кнопками */
+}
