@@ -11,14 +11,14 @@
 .buttonPay {
 	background-color: rgb(51, 85, 119);
 	color: white;
-	border: solid 1px transparent; /* убрать черную границу */
+	border: solid 1px transparent;
 	width: 100px;
-	padding: 10px 20px; /* добавить отступы */
-	border-radius: 5px; /* добавить закругленные углы */
-	transition: background-color 0.3s ease; /* добавить плавное изменение цвета при наведении */
+	padding: 10px 20px;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
 }
 
 .buttonPay:hover {
-	background-color: rgb(41, 75, 109); /* изменить цвет при наведении */
+	background-color: rgb(41, 75, 109);
 	cursor: pointer;
 }

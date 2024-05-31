@@ -6,29 +6,29 @@
 
 .productAndSearch {
 	display: flex;
-	flex-direction: column; /* чтобы поле поиска и кнопка сортировки были столбцом */
-	align-items: center; /* центрируем по горизонтали */
-	margin-bottom: 20px; /* добавляем отступ снизу */
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 20px;
 }
 
 .searchContainer {
-	text-align: center; /* центрируем содержимое */
+	text-align: center;
 	margin: 40px auto 0;
 }
 
 .sortButton {
-	margin-top: 30px; /* добавляем отступ сверху для кнопки */
-	display: inline-block; /* Делаем кнопку блочным элементом */
-	padding: 10px 20px; /* Подбираем размеры кнопки */
-	font-size: 16px; /* Размер шрифта */
-	font-weight: bold; /* Жирный шрифт */
-	text-transform: uppercase; /* Преобразуем текст в верхний регистр */
-	color: #ffffff; /* Цвет текста */
-	background-color: #3e7cb1; /* Цвет фона кнопки */
-	border: none; /* Убираем границу */
-	border-radius: 4px; /* Закругляем углы */
-	cursor: pointer; /* Изменяем курсор при наведении */
-	transition: background-color 0.3s ease; /* Плавное изменение цвета фона при наведении */
+	margin-top: 30px;
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #ffffff;
+	background-color: #3e7cb1;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
 }
 
 .sortButton:hover {
@@ -54,15 +54,15 @@
 	align-items: center;
 	background-color: #3e7cb1;
 	border: none;
-	padding: 10px 20px; /* Подбираем размеры селектов */
-	font-size: 16px; /* Размер шрифта */
-	font-weight: bold; /* Жирный шрифт */
-	text-transform: uppercase; /* Преобразуем текст в верхний регистр */
-	color: #ffffff; /* Цвет текста */
-	background-color: #3e7cb1; /* Цвет фона селекта */
-	border: none; /* Убираем границу */
-	border-radius: 4px; /* Закругляем углы */
-	cursor: pointer; /* Изменяем курсор при наведении */
+	padding: 10px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #ffffff;
+	background-color: #3e7cb1;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
 	transition: background-color 0.3s ease;
 }
 
@@ -71,18 +71,18 @@
 }
 
 .selectContainer :focus {
-	outline: none; /* Убираем обводку при фокусе */
+	outline: none;
 }
 
 .selectContainer option {
-	padding: 10px 20px; /* Подбираем размеры опций */
-	font-size: 16px; /* Размер шрифта */
-	background-color: #3e7cb1; /* Цвет фона опций */
-	border: none; /* Убираем границу */
-	border-radius: 4px; /* Закругляем углы */
-	cursor: pointer; /* Изменяем курсор при наведении */
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #3e7cb1;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
 }
 
 .selectContainer option:hover {
-	background-color: #336699; /* Изменяем цвет фона при наведении */
+	background-color: #336699;
 }
